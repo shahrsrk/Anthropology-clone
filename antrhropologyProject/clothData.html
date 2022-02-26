@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+     var clothData = [
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4130461070153_066_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "ML Monique Lhuillier Pleated Halter Mini Dress ",
+            price :  445,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130526830094_066_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Squareneck Flutter Sleeve Maxi Dress",
+            price : 575,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4110647160047_066_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Sleek Puff-Sleeved Blouse",
+            price :  98,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130652010001_052_b16?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Elyse Bias Slip Dress ",
+            price : 120 ,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130728470001_059_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Petra Embroidered Tunic Dress ",
+            price : 239 ,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4120652010025_050_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Slim Slip Midi Skirt ",
+            price :  98,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4130916210057_266_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Soft Printed Mini Dress ",
+            price : 148,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4120084320026_050_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Maeve Ruffled Wrap Maxi Skirt ",
+            price : 120 ,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4120310310017_055_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Pleated Maxi Skirt ",
+            price : 160,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4114529100169_041_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Maeve Ladybug Sweater Vest",
+            price : 98,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4120464030096_001_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Slit-Hem Mini Skirt",
+            price : 98,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4113326950085_062_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Maeve Brighton Flutter Polo Top ",
+            price : 98,
+        },
+        {
+            image : "https://images.ctfassets.net/5de70he6op10/1CoKoc1qqfzp7X1qnFYMu0/9864b9cb2f3d6690cf4e9810d7919ed6/January_2022_Site_Content_____In-Grid_Banner__Shop_All_Clothing_-_Vacation___Resort_Wear__2x.jpg?w=1440&q=80&fm=webp ",
+            name : "as the dress ",
+            price : 45,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4123607630019_009_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Maeve The Margot Cropped Kick Flare Pants ",
+            price :  98,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4114640120032_049_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Maeve Geometric Buttondown Sweater Vest",
+            price : 98 ,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4113326950085_010_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Maeve Brighton Flutter Polo Top ",
+            price : 98 ,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4138348690013_074_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Maeve Mini Skirt Set",
+            price : 180 ,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4114640120031_018_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Maeve Buttondown Vest",
+            price : 98 ,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4123461050023_023_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Amadi Pleated Wide-Leg Pants ",
+            price : 160,
+        }, {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130099510200_080_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Faithfull Side-Cut-Out Smocked Midi Dress ",
+            price : 199,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130652010034_001_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Maeve Bow-Back Midi Dress ",
+            price : 198,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130551300166_266_b15?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Patchwork Tunic Mini Dress",
+            price : 375,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130900600029_010_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Ruffled Halter Mini Dress",
+            price : 270,
+        },
+        {
+            image : "https://images.ctfassets.net/5de70he6op10/1xXbGg1bFrIKM4SK730oby/faffebd4a93317436917b633a9cc4a89/January_2022_Site_Content_____In-Grid_Banner__Shop_All_Clothing_-_Jackets_2x.jpg?w=1440&q=80&fm=webp ",
+            name : "Ruffled Halter Mini Dress",
+            price : 234 ,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4130920080018_009_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Plenty by Tracy Reese Printed Halter Maxi Dress ",
+            price : 248,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112609690111_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "T.La Classic V-Neck Tee ",
+            price : 48,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130646420009_011_c?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " ",
+            price : 168,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4112916210037_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Pilcro Sustainable Scoop Neck Tee ",
+            price : 48,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/64222805_045_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Jenny Seamless T-Back Bralette ",
+            price : 24,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/64219207_104_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Danni Seamless Hipster Briefs ",
+            price :12,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112522160090_060_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Maeve Racerback Tank ",
+            price : 38,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130464030102_079_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Bow-Tie Maxi Dress",
+            price :218,
+        },
+        {
+            image : " https://images.ctfassets.net/5de70he6op10/1u2m6SjKHx8MZ5aHMlLAA4/68dbf03d6972465f061dd56951f5a674/December_2021_Site_Content_____In-Grid_Banner__Shop_All_Clothing_-_The_Getaway_Shop.jpg?w=1440&q=80&fm=webp",
+            name : " Bow-Tie Maxi Dress",
+            price : 123,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4112345460081_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Pilcro Sustainable Ribbed Tank",
+            price : 38,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/66754771_001_c14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "T.La Layered Tank Dress",
+            price : 98,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/64201411_030_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Sasha Seamless V-Neck Bralette",
+            price : 24,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4130638280170_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Farm Rio Halter Maxi Dress ",
+            price : 230,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4110084320145_015_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Pilcro Relaxed Plaid Buttondown ",
+            price : 98,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112916210034_045_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Pilcro Everyday Baby Tee ",
+            price : 48,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4112522160084_028_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Pilcro Sustainable Boyfriend Tee ",
+            price : 48,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4130464030162_049_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Hutch V-Neck Tiered Wrap Midi Dress",
+            price : 198,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130464030175_009_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Hutch Ditsy Floral Corset Mini Dress",
+            price : 170,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130464030136_040_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Hutch Geo Wrap Maxi Dress",
+            price : 198,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4110095140043_020_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Pilcro Linen Surf Buttondown",
+            price : 90,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130344600122_266_c14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Let Me Be Mock Neck Sheer Mini Dress",
+            price : 170,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112529100016_010_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Pilcro Spliced-Neck Tee ",
+            price : 48,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4112368730011_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Cut-Out Top",
+            price : 68,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/64218787_104_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Seamless Longline Bralette",
+            price : 24,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112346380017_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Pilcro Sustainable Henley",
+            price : 58,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4130916210059_095_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Tiered & True Maxi Dress ",
+            price : 180,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112920170032_010_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Pilcro Sustainable Scoop-Neck Henley",
+            price : 68,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/66796657_024_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Maeve Ribbed Baby Tee",
+            price : 48,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130265410017_029_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Ruffle-Sleeve Printed-Wrap Maxi Dress ",
+            price : 170,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112059680073_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Porridge Floral Textured Sweatshirt ",
+            price : 98,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4110264840029_030_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Pilcro Oxford Tunic Buttondown",
+            price : 98,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4130346500020_079_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Puff-Sleeved Maxi Dress ",
+            price : 178,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4123650590174_030_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Maeve The Colette Ponte Pants ",
+            price : 120,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4112346380022_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Pilcro Wedge Poncho Tee",
+            price : 68,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112257230143_030_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Striped Cut Out Bow Back Top",
+            price : 90,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4110259830431_010_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Cloth & Stone Classic Buttondown ",
+            price : 90,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4112346380020_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Pilcro Sustainable Swing Tee ",
+            price : 58,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112346380023_009_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "aeve Crinkle Gingham Smocked Top ",
+            price : 78,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4130605590012_060_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Off-The-Shoulder Poplin Midi Dress",
+            price : 230,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4120084320030_011_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Maeve Buttoned Mini Skirt ",
+            price : 98,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4112265640001_079_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Maeve Button-Side Top ",
+            price : 70,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4110907290005_070_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Pilcro Bella Embroidered Buttondown",
+            price : 148,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4110089450028_010_b15?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Maeve Poplin Cropped Blouse ",
+            price : 90,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4123650590133_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Maeve The Colette Full Length Wide-Leg Pants",
+            price : 120,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4110264840030_010_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Pilcro Corset Tank ",
+            price : 80,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112264070041_010_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Maeve Notched Top ",
+            price : 68,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/64309925_099_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Printed Seamless T-Back Bralette",
+            price : 26,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4138348690017_049_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Maeve Tube Top and Wide-Leg Pant Set",
+            price : 190,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112257230146_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Ruched Halter Tank",
+            price : 70,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4125831920038_093_c?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Pilcro Denim Shorts ",
+            price : 98,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4114529100174_066_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Pilcro Cable-Knit Cardigan",
+            price : 148,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4110370060054_010_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Maeve Classic Buttondown",
+            price : 130,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4122900970059_091_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Pilcro The Skipper Long Ultra High-Rise Jeans ",
+            price : 140,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4110578570030_009_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Pilcro The Whitney Trapeze Buttondown",
+            price : 120,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/67164541_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Maeve Cropped Racerback Tank ",
+            price : 28,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4110464030038_014_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Bow Tie Strapless Top ",
+            price : 130,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4112522160085_011_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Pilcro Ribbed Corset Tank",
+            price : 68,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/65561979_011_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Citizens of Humanity Iris Cut-Out Top ",
+            price : 128,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/64310519_099_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Printed Seamless Hipster Briefs",
+            price : 14
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112522160086_010_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Pilcro Ruched Tee",
+            price : 68,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4130464030176_011_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : " Eyelet Bow-Tie Mini Dress",
+            price : 180,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/66303835_006_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Daily Practice by Anthropologie Ribbed Mini Dress",
+            price : 118,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4120578570004_030_b2?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Maeve Pleated Mini Skirt ",
+            price : 98,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4110916210091_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Pilcro Gauzy Buttondown ",
+            price : 98,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4113326950088_033_b15?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Everyday Maryanne Tank",
+            price : 80,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4110647160032_009_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : " Emily Isabella Whimsy Buttondown",
+            price : 80,
+        },
+        {
+            image : "https://images.urbndata.com/is/image/Anthropologie/4112522160088_031_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349 ",
+            name : "Pilcro V-Neck Tee ",
+            price : 68,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/4110059680075_010_b14?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Seamed Stripe Vest ",
+            price : 98,
+        },
+        {
+            image : " https://images.urbndata.com/is/image/Anthropologie/67005546_001_b?$an-category$&fit=constrain&fmt=webp&hei=523&qlt=80&wid=349",
+            name : "Cropped Floral Crochet Vest ",
+            price : 88,
+        },
+        
+    ]
+    localStorage.setItem("clothData",JSON.stringify(clothData))
+</script>
+    

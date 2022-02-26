@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NavBar</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2eJ660B0w9Mc8fqIBnvBeyM-ANgQHqnFvIA&usqp=CAU" type="image/gif">
+    
+
+  <style>
+
+
+#container{
+      /* height: 500px; */
+      width: 450px;
+      /* border: 2px solid red; */
+      font-family: sans-serif;
+      /* font-weight: bold; */
+      margin: auto;
+      margin-top: 30px;
+      padding: 20px;
+      /* padding-left: 150px; */
+      /* background-color: silver; */
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      text-align: center;
+    }
+    h4{
+      font-family: sans-serif;
+    }
+
+    input{
+      width: 270px;
+      height: 30px;
+      border-radius: 10px;
+    }
+
+    
+
+    #submitButton{
+      width: 280px;
+      margin-top: 20px;
+      height: 40px;
+      /* font-size: 16px; */
+      background-color: #4b5666;
+      font-size:18px;
+      padding:5px;
+      color: white;
+    }
+
+    a{
+      font-size: 30px; 
+      margin-left: 11%;
+      color: white;
+    }
+    #name{
+      font-size:14px;
+      padding:5px;
+    }
+    #mobile{
+      font-size:14px;
+      padding:5px;
+    }
+    #email{
+      font-size:14px;
+      padding:5px;
+    }
+
+    #password{
+      font-size:14px;
+      padding:5px;
+      
+    }
+
+  </style>
+
+
+</head>
+<body>
+ 
+
+
+  <div id="container">
+    
+    <form action="" id="form">
+  
+      <div>
+        <h4>Email Id</h4>
+        <input type="email" placeholder="Enter your email address" id="email">
+      </div>
+  
+      <div>
+        <h4>Password</h4>
+        <input type="text" placeholder="Enter the password" id="password">
+      </div>
+
+      <input type="submit" value ="Login" id="submitButton">
+      
+
+    </form>
+
+  </div>
+</body>
+</html>
+
+<script>
+    
+    var regdArr = JSON.parse(localStorage.getItem("signUpLocal"))
+    console.log(regdArr);
+
+    document.querySelector("#form").addEventListener("submit", checkUser)
+    var form = document.querySelector("#form")
+    
+   function checkUser(event){
+    event.preventDefault();
+
+    console.log(form.email.value)
+    
+    var user = form.email.value; 
+    var pass = form.password.value;
+    console.log(user, pass);
+    
+    var found = false;
+    for(var i=0 ; i<regdArr.length ; i++)
+    {
+      if(regdArr[i].email == user && regdArr[i].password == pass){
+        found = true;
+        break;
+      }
+    }
+    if(found == true){
+      alert("Congrats! login Success")
+      
+     document.querySelector("#submitButton").addEventListener("click", function(){
+       window.location.href = "index.html";
+     })
+    }
+    else{
+      alert("login Failed!")
+    }
+    
+  }
+  
+
+</script>

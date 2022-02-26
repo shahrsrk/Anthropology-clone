@@ -1,0 +1,533 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloth Cart</title>
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+    crossorigin="anonymous"
+  />
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2eJ660B0w9Mc8fqIBnvBeyM-ANgQHqnFvIA&usqp=CAU" type="image/gif">
+    
+
+    <link rel="stylesheet" href="style.css">
+
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    #total{
+      /* height: 65px; */
+      width: 350px;
+      background-color: #4b5666;
+      text-align: center;
+      line-height: 18px;
+      border-radius: 10px;
+      /* margin-left: 80px; */
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      
+      justify-content: space-around;
+      color: white;
+    }
+
+    #payment{
+      /* height: 35px; */
+      width: 150px;
+      background-color: #4b5666;
+      margin-right:20px;
+      /* background-color: #4b5666; */
+      text-align: center;
+      line-height: 18px;
+      border-radius: 10px;
+      /* margin-left: 80px; */
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      
+      justify-content: space-around;
+      color: white;
+      
+      /* margin-top: 20px; */
+    }
+    #payment>button{
+      font-size:20px;
+      background-color: #4b5666;
+      border: none;
+      color:white
+    }
+    #ToatalPaymentCart{
+      /* border: 3px solid green; */
+      display: flex;
+      height: 100px;
+      gap: 40px;
+      background-color: #93a8c7;
+      justify-content: flex-end;
+      
+      /* float: right; */
+    }
+    .addBtn{
+        /* border: 3px solid yellow; */
+        font-size: 18px;
+        padding:5px 20px;
+    }
+
+    
+    h2{
+      display: flex;
+    }
+  
+    
+    .button{
+      height: 35px;
+      width: 80px;
+    }
+
+    #cart{
+      color: black;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #cartCloth{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+      width: 90%;
+      margin:auto;
+      font-family: sans-serif;
+      /* border: 2px solid red; */
+    }
+
+    h2{
+      display: inline;
+      margin-top: 6px;
+    }
+
+    /* p{
+      margin-left: 20px;
+      display: inline-block;
+      
+    } */
+
+    #cartCloth > div{
+      text-align: center;
+      margin-top: 20px;
+      /* border: 2px solid black; */
+      border-radius: 15px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+    #cartDivBtn{
+      /* border: 2px solid red; */
+      width: 70%;
+      margin: auto;
+      display:flex;
+      justify-content: space-around;
+    }
+    /* #photo{
+      height:250px;width:100%
+    } */
+    
+    
+  </style>
+  
+  
+</head>
+<body>
+
+    
+<nav>
+    
+  <div class="slideshow-container">
+  
+      <div class="mySlides fade">
+        
+        <div class="firstBackgroung"></div>
+        <div class="backNavtext">limited Time Up to 30%off BEDDING, PILLOWS & THROWS <a href="home.html" class="backlink">shop</a> <a href="https://www.anthropologie.com/help/current-promotions" class="backlink">online only - see details</a></div>
+      </div>
+      
+      
+      <div class="mySlides fade">
+        
+        <div class="secondBackground"></div>
+        <div class="backNavtext">limited Time Up to 30%off BEDDING, PILLOWS & THROWS <a href="home.html" class="backlink">shop</a> <a href="https://www.anthropologie.com/help/current-promotions" class="backlink">online only - see details</a></div>
+      </div>
+      
+      <div class="mySlides fade">
+      
+        <div class="thirdBackgroung"></div>
+        <div class="backNavtext">limited Time Up to 30%off BEDDING, PILLOWS & THROWS <a href="home.html" class="backlink">shop</a> <a href="https://www.anthropologie.com/help/current-promotions" class="backlink">online only - see details</a></div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+      </div>
+      <br>
+
+
+
+      <div id="web16">
+          <div id="navbar">
+              <div class="containerNav">
+                  <div id="english">
+                      
+                      <select  name="English" id="lan">
+                          <option value=""><i class="fa fa-fw fa-user"></i> Currency</option>
+                          <option value="">USD ($)</option>
+                          <option value="">Language</option>
+                          <option value="">EnglishFrench</option>
+                      </select>
+                  </div>
+      
+                  <div id="navSign">
+                      <a class="signAtt" href="signUp.html"><i class="fa fa-fw fa-user"></i>Sign In / Sign Up</a>
+                      
+                  </div>
+              </div>
+          </div>
+          <hr>
+      <!-- second navbar -->
+      
+          <div id="navSecond">
+              <div class="navSecondLeft">
+  
+                  <div><img src="https://images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg"></div>
+                  <div class="vl"></div>
+                  <div><img src="https://images.ctfassets.net/5de70he6op10/y1O9tEDOvCGliGUvT9RoJ/eb8ab4734c5e3778b8b61da70ed441ac/AL_NewLogo_2.svg" alt="">
+  
+                  </div>
+                  <div class="vl"></div>
+              </div>
+              <div class="navSecondRight">
+                  <div><form action="/action_page.php">
+                      <input class="searchBr" type="text" placeholder="Search.." name="search">
+                      <button class="NavSearchBr" type="submit"><i class="fa fa-search"></i></button>
+                  </form></div>
+                  <a class="signAtt" href="clothCart.html"><i class="fa fa-fw fa-briefcase"></i></a>
+                  
+              </div>
+              <!-- <hr> -->
+          </div>
+          <hr>
+
+
+
+          
+          <div id="dropdownNav">
+              <div class="dropdown">
+                  <button class="dropbtn"><a href="new.html">New!</a></button>
+                  <div class="dropdown-content">
+                      <a href="beauty.html">Beauty & Wellness</a>
+                      <a href="cloth.html">Clothing</a>
+                      <a href="dresses.html">Dresses</a>
+                      <a href="home.html">Home</a> & Furniture</a>
+                      <a href="pluse.html">Plus</a>
+                      <a href="shoes.html">Shoes</a>
+                     
+                  </div>
+                </div>
+               
+  
+  
+  
+  
+  
+  
+                <div class="dropdown">
+                  <button class="dropbtn">Dresses</button>
+                  <div class="dropdown-content">
+                      <a href="">Shop by Category</a>
+                      <a href="">Shop All Dresses</a>
+                      <a href="">New!</a>
+                      <a href="wedding.html">Occasion & Party Dresses</a>
+                      <a href="cloth.html">Lounge & Casual Dresses</a>
+                      <a href="cloth.html">Formal Dresses</a>
+                      
+                  </div>
+                </div>
+  
+                <div class="dropdown">
+                  <button class="dropbtn"><a href="cloth.html" target="_blank">Clothing</a></button>
+                  <div class="dropdown-content">
+                      <a href="cloth.html">Shop by Category</a>
+                      <a href="cloth.html">Shop All Clothing</a>
+                      <a href="cloth.html">New!</a>
+                      <a href="">Top-Rated</a>
+                      <a href="cloth.html">Activewear</a>
+                      <a href="cloth.html">Dresses</a>
+                      <a href="cloth.html">Intimates & Lingerie</a>
+                      <a href="cloth.html">Jackets</a>
+                      <a href="cloth.html">Jeans</a>
+                      <a href="cloth.html">Jumpsuits</a>
+                      <a href="cloth.html">Kimonos</a>
+                      <a href="cloth.html">Loungewear</a>
+  
+                  </div>
+                </div>
+
+                <div class="dropdown">
+                  <button class="dropbtn"><a href="shoes.html">Shoes</a></button>
+                  <div class="dropdown-content">
+                    <a href="shoes.html">Shop All Shoes</a>
+                    <a href="#">New!</a>
+                    <a href="shoes.html">Boots & Booties</a>
+                    <a href="shoes.html">Flats</a>
+                    <a href="shoes.html">Heels</a>
+                    <a href="">Mules & Clogs</a>
+                    <a href="">Sandals</a>
+                    <a href="">Slippers</a>
+                    <a href="">Sneakers</a>
+                  </div>
+                </div>
+      
+  
+                <div class="dropdown">
+                  <button class="dropbtn"><a href="accessories.html">Accessorise</a></button>
+                  <div class="dropdown-content">
+                    <a href="">Shop by Category</a>
+                    <a href="accessories.html">Shop All Accessories</a>
+                    <a href="">New!</a>
+                    <a href="">Top-Rated</a>
+                    <a href="">Bags & Small Accessories</a>
+                    <a href="">Belts</a>
+                    <a href="">Hair Accessories</a>
+                    <a href="">Hats</a>
+                    <a href="">Jewelry</a>
+                    <a href="">Scarves & Kimonos</a>
+                </div>
+                </div>
+      
+                
+                <div class="dropdown">
+                  <button class="dropbtn"><a href="home.html">Home & Furniture</a></button>
+                  <div class="dropdown-content">
+                    <a href="home.html">Amber Lewis</a>
+                    <a href="home.html">Nathalie Lété</a>
+                    <a href="home.html">Francesca Kaye</a>
+                    <a href="home.html">Lemieux et Cie</a>
+                    <a href="home.html">Jen Hewett</a>
+                    <a href="home.html">Marcello Velho</a>
+                    <a href="home.html">Anna Spiro</a>
+                  </div>
+                </div>
+      
+               
+                <div class="dropdown">
+                  <button class="dropbtn"> <a href="beauty.html">Beauty & Wellness</a></button>
+                  <div class="dropdown-content">
+                    <a href="beauty.html">Perfume</a>
+                    <a href="beauty.html">Skincare</a>
+                    <a href="beauty.html">Sun Care</a>
+                    <a href="beauty.html">The Wellness Shop</a>
+                    <a href="beauty.html">Tools & Brushes</a>
+                    <a href="">Workout Gear</a>
+                    <a href="beauty.html">Sale Beauty & Wellness</a>
+                  </div>
+                </div>
+      
+                
+                <div class="dropdown">
+                  <button class="dropbtn"><a href="garden.html">Garden & Outdoor</a></button>
+                  <div class="dropdown-content">
+                    <a href="garden.html">Shop All Garden & Outdoor</a>
+                    <a href="garden.html">Outdoor Living</a>
+                    <a href="garden.html">Plants & Flowers</a>
+                  </div>
+                </div>
+      
+                
+                <div class="dropdown">
+                  <button class="dropbtn"><a href="wedding.html">Weeding</a></button>
+                  <div class="dropdown-content">
+                    
+                      <a href="wedding.html">Shop All Weddings</a>
+                      <a href="wedding.html">Bride</a>
+                      <a href="wedding.html">Bridesmaids & Bridal Party</a>
+                      <a href="wedding.html">Mother of the Bride</a>
+                      <a href="cloth.html">Formal Dresses</a>
+                      <a href="shoes.html">Shoes & Accessories</a>
+                  </div>
+                </div>
+      
+                
+                <div class="dropdown">
+                  <button class="dropbtn"><a href="gifts.html">Gifts & Candles</a></button>
+                  <div class="dropdown-content">
+                    <a href="gifts.html">The Pet Shop</a>
+                    <a href="gifts.html">Home Gifts</a>
+                  <a href="gifts.html">The Gift Set Shop</a>
+                  <a href="gifts.html">The Games Shop</a>
+                  </div>
+                </div>
+      
+                
+                <div class="dropdown">
+                  <button class="dropbtn"><a href="sales.html">Sales</a></button>
+                  <div class="dropdown-content">
+                    <a href="sales.html">Freshly Cut</a>
+                    <a href="sales.html">Accessories</a>
+                    <a href="sales.html">Shop All Sale</a>
+                    <a href="sales.html">Beauty & Wellness</a>
+                    <a href="sales.html">Clothing</a>
+                  </div>
+                </div>
+          </div>
+
+
+
+
+      
+      
+      <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+
+
+
+
+
+  </nav>
+
+  
+  <div id="ToatalPaymentCart">
+    
+    <div id="total">
+     <p>Total Amount</p>
+    <p id="final">0</p>
+    </div>
+
+    <div id="payment">
+    <button onclick="window.location.href='checkOut.html'">Proceed to Pay</button>
+    </div>
+  </div>
+
+  <div id="cartCloth">
+
+  </div>
+  
+
+  <!-- <h3 id="totalQty">0</h3> -->
+  
+</body>
+</html>
+
+<script>
+
+var cartArr = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+console.log(cartArr)
+
+// displaydata(clothData);
+// console.log(displaydata)
+
+function displaydata(clothItems){
+    document.querySelector("#cartCloth").innerHTML = "";
+
+    clothItems.map(function(element,index,array){
+
+var childdiv = document.createElement("div");
+
+var image = document.createElement("img");
+image.setAttribute("src",element.image);
+image.setAttribute("id","photo");
+
+var name = document.createElement("p");
+name.innerText=element.name;
+
+// correct
+
+var price = document.createElement("p");
+price.innerText= element.price;
+
+
+
+var cartDivBtn=document.createElement("div");
+cartDivBtn.setAttribute("id","cartDivBtn")
+var btn1 = document.createElement("button");
+btn1.setAttribute("class","addBtn")
+btn1.innerText = "Add +1"
+btn1.addEventListener("click" , function(){
+  increaseQuantity(index);
+});
+
+    var btn2 = document.createElement("button");
+    btn2.setAttribute("class","addBtn")
+    btn2.innerText = "Minus -1"
+    btn2.addEventListener("click" , function(){
+      decreaseQuantity(index);
+    });
+    cartDivBtn.append(btn1,btn2)
+
+childdiv.append(image,name,price,cartDivBtn);
+
+document.querySelector("#cartCloth").append(childdiv);
+
+})
+
+}
+
+function showtotal(){
+  var total = cartArr.reduce(function(accumulator,element,index,array){
+  return accumulator + (element.price * element.quantity);
+  },0)
+
+  document.querySelector("#final").innerText = `₹ ${total}`;
+  localStorage.setItem("total",JSON.stringify(total));
+}
+
+displaydata(cartArr);
+
+function increaseQuantity(index){
+  console.log(index);
+  cartArr[index].quantity++;
+  console.log(cartArr);
+  localStorage.setItem("cartItems", JSON.stringify(cartArr));
+
+  displaydata(cartArr);
+  showtotal();
+}
+
+function decreaseQuantity(index){
+  console.log(index);
+  cartArr[index].quantity--;
+  console.log(cartArr);
+  localStorage.setItem("cartItems", JSON.stringify(cartArr));
+
+  displaydata(cartArr);
+  showtotal();
+}
+
+
+</script>

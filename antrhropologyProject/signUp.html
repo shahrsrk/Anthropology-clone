@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NavBar</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2eJ660B0w9Mc8fqIBnvBeyM-ANgQHqnFvIA&usqp=CAU" type="image/gif">
+    
+
+  <style>
+
+
+    #container{
+      /* height: 500px; */
+      width: 450px;
+      /* border: 2px solid red; */
+      font-family: sans-serif;
+      /* font-weight: bold; */
+      margin: auto;
+      margin-top: 30px;
+      padding: 20px;
+      /* padding-left: 150px; */
+      /* background-color: silver; */
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      text-align: center;
+    }
+
+    h4{
+      font-family: sans-serif;
+    }
+
+    input{
+      width: 270px;
+      height: 30px;
+      border-radius: 10px;
+    }
+
+    #submitButton{
+      width: 280px;
+      margin-top: 20px;
+      height: 40px;
+      /* font-size: 16px; */
+      background-color: #4b5666;
+      font-size:18px;
+      padding:5px;
+      color: white;
+    }
+
+    a{
+      font-size: 30px; 
+      margin-left: 11%;
+      color: white;
+    }
+    #name{
+      font-size:14px;
+      padding:5px;
+    }
+    #mobile{
+      font-size:14px;
+      padding:5px;
+    }
+    #email{
+      font-size:14px;
+      padding:5px;
+    }
+
+    #password{
+      font-size:14px;
+      padding:5px;
+      
+    }
+    
+
+  </style>
+
+
+</head>
+<body>
+
+
+  <div id="container">
+    
+    <form action="" id="Form">
+      <p>Welcome to Anthropologie! It's quick and easy to set up an account.</p>
+      <h1>Create Account</h1>
+
+      <div>
+        <h4>Your name</h4>
+        <input type="text" placeholder="Enter Your Name Here" id="name">
+      </div>
+  
+      <div>
+        <h4>Mobile Number</h4>
+        <input type="number" placeholder="Enter your mobile number" id="mobile">
+      </div>
+  
+      <div>
+        <h4>Email Id</h4>
+        <input type="email" placeholder="Enter your email address" id="email">
+      </div>
+  
+      <div>
+        <h4>Password</h4>
+        <input type="text" placeholder="Enter the password" id="password">
+      </div>
+
+      <input type="submit" id="submitButton">
+
+      
+    </form>
+
+  </div>
+</body>
+</html>
+
+<!-- <script>
+  window.location.href = "signIn.html";
+</script> -->
+
+<script>
+
+    document.querySelector("#Form").addEventListener("submit", formFunction)
+    var signUpArr = JSON.parse(localStorage.getItem("signUpLocal")) || [];
+
+     function formFunction(event){
+       event.preventDefault();
+
+       var name = document.querySelector("#name").value;
+       var mobile = document.querySelector("#mobile").value;
+       var email = document.querySelector("#email").value;
+       var password = document.querySelector("#password").value;
+       
+       var signUpObj = {
+         name : name,
+         Mobile : mobile,
+         email : email,
+         password : password,
+       };
+
+       console.log(signUpObj);
+       signUpArr.push(signUpObj);
+
+       localStorage.setItem("signUpLocal" ,JSON.stringify(signUpArr));
+     }
+
+     document.querySelector("#submitButton").addEventListener("click", function(){
+       window.location.href = "signIn.html";
+     })
+</script>
